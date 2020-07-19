@@ -1,4 +1,9 @@
 function isOdd(e) {
     return false
 }
-isOdd(8)
+
+
+function init() {
+    isOdd(8)
+}
+init()
