@@ -1,0 +1,41 @@
+By: Harish Boke
+Date: July 19 2020 
+Time: 12PM to 1PM 
+
+Time 10 min
+- What is git
+- git vs github
+- what is version control management  - https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
+- how it works ?
+
+Time 5 min
+- questions about terminology ?
+
+Time 5 min
+- Github walk through 
+-  What is Project 
+- What is repository
+- members 
+-
+
+20 min 
+- Let get hands dirty
+- install git, shell - https://git-scm.com/downloads vs client https://www.sourcetreeapp.com/
+- git config -  https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
+- create repository
+- clone 
+- https vs ssh
+- exiting repository vs new repository
+- folder navigation
+git branch , importance to lifecycle 
+- git add, commit
+- origin 
+- set origin 
+- git branch
+- git push 
+- create Pull request / merge request
+- add reviewer
+
+
+Time 10: 
+Questions ?
