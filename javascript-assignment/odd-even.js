@@ -7,3 +7,4 @@ function init() {
     isOdd(8)
 }
 init()
+
