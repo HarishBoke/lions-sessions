@@ -66,7 +66,7 @@
     }];
 
     for(let data of galleryData){
-        rowEle.innerHTML += `<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 filterEle ${data.category}" id="${data.category}">
+        rowEle.innerHTML += `<div class="col-10 col-sm-6 col-lg-4 mx-auto my-3 filterEle" id="${data.category}">
                 <div class="card" >
                 <div class="img-container">
                     <img src="${data.image}" class="card-img-top store-img" alt="">
