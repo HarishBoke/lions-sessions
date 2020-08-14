@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta chaet="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Assignment </title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+    
+
+<body>
+
+    <section>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-10 mx-auto col-sm-6 text-center">
+                <h1 class="text-capitalize">our <strong class="banner-title ">store</strong></h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class=" col-lg-8 mx-auto d-flex justify-content-around flex-wrap margin-2rem ">
+                <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" onclick="filterBtn('all')"> all</a>
+                <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" onclick="filterBtn('cakes')">cakes</a>
+                <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" onclick="filterBtn('cupcakes')">cupcakes</a>
+                <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" onclick="filterBtn('sweets')">sweets</a>
+                <a href="#" class="btn btn-outline-secondary btn-black text-uppercase filter-btn m-2" onclick="filterBtn('doughnuts')">doughnuts</a>
+                </div>
+            </div> 
+
+            <div class="row">
+                <div class="col-10 mx-auto col-md-6">
+                    <form>
+                        <div class="input-group mb-3">
+                        <div class="input-group-prepend ">
+                            <span class="input-group-text search-box" id="search-icon"><i class="fas fa-search"></i></span>
+                        </div>
+                        <input type="text" class="form-control" onkeyup="searchEle()" placeholder="Search Item...." id="search-item">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="row" id="storeItems">
+
+            </div>
+
+          </div>
+    </section>
+
+    <script src="js/filter.js"></script>
+</body>
+</html>
