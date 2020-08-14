@@ -112,7 +112,6 @@ const filterByType = (type) => {
   const filteredArray = items.filter((item) => {
     return item.category == type;
   });
-  const itemsToRender =
-    type == "all" ? [...filteredArray, ...items] : filteredArray;
+  const itemsToRender = type == "all" ? items : filteredArray;
   renderItems(itemsToRender);
 };
