@@ -94,31 +94,31 @@
     hideAllEle();
     if(data === 'all'){
         filterEle.forEach(function(item){
-            if (item.classList.contains('filterEle')){
+            if (item.id){
                     item.style.display = 'block';
                 } 
         }) ;  
         }else if (data === 'cakes'){
             filterEle.forEach(function(item){
-                if (item.classList.contains('cakes')){
+                if (item.id === 'cakes'){
                     item.style.display = 'block';
                 }
             });
         }else if (data === 'cupcakes'){
             filterEle.forEach(function(item){
-                if (item.classList.contains('cupcakes')){
+                if (item.id === 'cupcakes'){
                     item.style.display = 'block';
                 }
             });
         }else if (data === 'sweets'){
             filterEle.forEach(function(item){
-                if (item.classList.contains('sweets')){
+                if (item.id === 'sweets'){
                     item.style.display = 'block';
                 }
             });
         }else if (data === 'doughnuts'){
             filterEle.forEach(function(item){
-                if (item.classList.contains('doughnuts')){
+                if (item.id === 'doughnuts')){
                     item.style.display = 'block';
                 }
             });
@@ -140,7 +140,7 @@
 
 
         storeItems.forEach((item) => {
-            if(item.innerText.includes(inputTxt)){
+            if(item.id === inputTxt){
                 item.style.display = 'block';
         } else {
             item.style.display = 'none';
