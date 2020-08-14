@@ -91,6 +91,7 @@
     
     function filterBtn(data){
     const filterEle = document.querySelectorAll('.filterEle');
+    hideAllEle();
     if(data === 'all'){
         filterEle.forEach(function(item){
             if (item.classList.contains('filterEle')){
@@ -101,35 +102,36 @@
             filterEle.forEach(function(item){
                 if (item.classList.contains('cakes')){
                     item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
                 }
             });
         }else if (data === 'cupcakes'){
             filterEle.forEach(function(item){
                 if (item.classList.contains('cupcakes')){
                     item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
                 }
             });
         }else if (data === 'sweets'){
             filterEle.forEach(function(item){
                 if (item.classList.contains('sweets')){
                     item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
                 }
             });
         }else if (data === 'doughnuts'){
             filterEle.forEach(function(item){
                 if (item.classList.contains('doughnuts')){
                     item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
                 }
             });
         }
+    }
+
+
+    function hideAllEle(){
+        let storeItems = document.querySelectorAll('.filterEle');
+
+        storeItems.forEach(function(item){
+            item.style.display = 'none';
+        });
     }
 
     function searchEle(){
