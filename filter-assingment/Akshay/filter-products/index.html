@@ -24,35 +24,35 @@
       <div class="md:mb-0 mb-4">
         <button
           class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded-lg mr-2 filter-button"
-          onclick="filterByType('all')"
+          onclick="filterByType(this)"
           id="all"
         >
           All
         </button>
         <button
           class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded-lg mr-2 filter-button"
-          onclick="filterByType('cake')"
+          onclick="filterByType(this)"
           id="cake"
         >
           Cakes
         </button>
         <button
           class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded-lg mr-2 filter-button"
-          onclick="filterByType('cupcake')"
+          onclick="filterByType(this)"
           id="cupcake"
         >
           Cupcakes
         </button>
         <button
           class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded-lg mr-2 filter-button"
-          onclick="filterByType('sweet')"
+          onclick="filterByType(this)"
           id="sweet"
         >
           Sweets
         </button>
         <button
           class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded-lg mr-2 filter-button"
-          onclick="filterByType('doughnut')"
+          onclick="filterByType(this)"
           id="doughnut"
         >
           Doughnuts
@@ -62,7 +62,6 @@
         <input
           class="bg-white appearance-none border border-gray-400 rounded-lg w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-pink-500"
           id="filterInput"
-          onkeyup="filterByText()"
           type="search"
           placeholder="Filter items"
         />

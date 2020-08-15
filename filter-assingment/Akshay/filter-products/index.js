@@ -95,23 +95,38 @@ const renderItems = (items) => {
 //initial render
 renderItems(items);
 
-//to filter items by query provided by user
-const filterByText = (e) => {
-  const filterQuery = document
-    .querySelector("#filterInput")
-    .value.toLowerCase();
-  const filteredArray = items.filter((item) => {
-    return item.title.toLowerCase().includes(filterQuery);
-  });
-  renderItems(filteredArray);
+//The debounce() function forces a function to wait a certain amount of time before running again. The function is built to limit the number of times a function is called
+// https://www.youtube.com/watch?v=B1P3GFa7jVc
+const debounce = (fn, delay) => {
+  let timeOut;
+  return function (...args) {
+    if (timeOut) {
+      clearTimeout(timeOut);
+    }
+    timeOut = setTimeout(() => {
+      fn(...args);
+    }, delay);
+  };
 };
+//to filter items by query provided by user
+document.getElementById("filterInput").addEventListener(
+  "keyup",
+  debounce(function () {
+    const filterQuery = document
+      .querySelector("#filterInput")
+      .value.toLowerCase();
+    const filteredArray = items.filter((item) => {
+      return item.title.toLowerCase().includes(filterQuery);
+    });
+    renderItems(filteredArray);
+  }, 1000)
+);
 
 //to filter items by category selected by user
-const filterByType = (type) => {
-  const filterButtons = Array.from(document.querySelectorAll(".filter-button"));
+const filterByType = (e) => {
   const filteredArray = items.filter((item) => {
-    return item.category == type;
+    return item.category == e.id;
   });
-  const itemsToRender = type == "all" ? items : filteredArray;
+  const itemsToRender = e.id == "all" ? items : filteredArray;
   renderItems(itemsToRender);
 };
