@@ -1,16 +1,9 @@
-*{
-    padding: 0px;
-    margin: 0px;
-}
 section{
     padding: 5rem 0;
     background: #f3f3f3;
 }
 .margin-2rem{
     margin: 2rem;
-}
-.card-img-top:hover .store-item-icon{
-    display: block;
 }
 .store-item-icon {
     position: absolute;
@@ -20,4 +13,7 @@ section{
     background: rgb(254, 233, 151);
     border-top-left-radius: 1rem;
     display:  none;
+}
+.card-img-top:hover + .store-item-icon{
+    display: block;
 }
