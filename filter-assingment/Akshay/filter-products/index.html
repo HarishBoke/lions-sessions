@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100">
+    <header class="text-center p-8">
+      <h1
+        class="text-4xl font-semibold text-pink-600"
+        style="font-family: sail;"
+      >
+        Our Patisserie
+      </h1>
+    </header>
+    <section
+      class="flex justify-between max-w-screen-xl mx-4 my-8 md:mx-auto flex-col md:flex-row"
+    >
+      <div class="md:mb-0 mb-4">
+        <button
+          class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded-lg mr-2 filter-button"
+          onclick="filterByType(this)"
+          id="all"
+        >
+          All
+        </button>
+        <button
+          class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded-lg mr-2 filter-button"
+          onclick="filterByType(this)"
+          id="cake"
+        >
+          Cakes
+        </button>
+        <button
+          class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded-lg mr-2 filter-button"
+          onclick="filterByType(this)"
+          id="cupcake"
+        >
+          Cupcakes
+        </button>
+        <button
+          class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded-lg mr-2 filter-button"
+          onclick="filterByType(this)"
+          id="sweet"
+        >
+          Sweets
+        </button>
+        <button
+          class="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded-lg mr-2 filter-button"
+          onclick="filterByType(this)"
+          id="doughnut"
+        >
+          Doughnuts
+        </button>
+      </div>
+      <div class="md:w-1/4">
+        <input
+          class="bg-white appearance-none border border-gray-400 rounded-lg w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-pink-500"
+          id="filterInput"
+          type="search"
+          placeholder="Filter items"
+        />
+      </div>
+    </section>
+
+    <section
+      class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 max-w-screen-xl mx-auto mb-8"
+      id="itemsContainer"
+    ></section>
+    <script src="./index.js"></script>
+    <script></script>
+  </body>
+</html>
