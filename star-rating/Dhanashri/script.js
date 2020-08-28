@@ -3,6 +3,7 @@ const starEle = document.querySelector(".rating-ele").children;
 const sratCount = 5;
 const ratingValue = document.querySelector("#ratingValue");
 const massage = ['Terrible', 'Poor', 'Average', 'Very Good', 'Excellent'];
+
  
 const generateStarUI = () => {
     
