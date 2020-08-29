@@ -43,4 +43,5 @@ html,body{
 
 .active{
   color: #fe7 !important;
+  text-shadow: 0 0 20px #952;
 }
