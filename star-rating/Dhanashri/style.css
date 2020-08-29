@@ -25,7 +25,7 @@ html,body{
 }
 .rating-box .rating-ele .fa{
   font-size: 40px;
-  color: #fe7;
+  color: #fff;
   padding: 10px;
   float: left;
   transition: all 0.2s ease;
@@ -41,5 +41,6 @@ html,body{
     transition: all 0.2s ease;
 }
 
-
-
+.active{
+  color: #fe7 !important;
+}
