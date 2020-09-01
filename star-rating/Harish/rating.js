@@ -105,12 +105,6 @@ const starRating  = (function rating(){
 3. @entityIcon / HTMLEntity { normal and active, color} 
 4. HTML / DOM element
 */
-<<<<<<< HEAD
 starRating.init(15, 'mouseover' )
 starRating.init(5, 'click', { entity: '&#9825;', entityActive: '&#9829;', color: '#0088ff' }, { container: 'ratingContainer1' , textContainer: 'ratingTooltip1'} )
 starRating.init(5, 'click', { entity: '&#9872;', entityActive: '&#9873;', color: '#ff9a00' }, { container: 'ratingContainer2' , textContainer: 'ratingTooltip2'} )
-=======
-starRating.init(7, 'click' )
-starRating.init(5, 'click', { entity: '&#9825;', entityActive: '&#9829;', color: '#0088ff' }, { container: 'ratingContainer1' , textContainer: 'ratingTooltip1'} )
-starRating.init(5, 'click', { entity: '&#9872;', entityActive: '&#9873;', color: '#ff9a00' }, { container: 'ratingContainer2' , textContainer: 'ratingTooltip2'} )
->>>>>>> e19a072e6a90459524614528521b6a39e1c3f723
