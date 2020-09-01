@@ -3,48 +3,49 @@
     <head>
         <title>Star Rating Assignment - Team D</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script defer src="index.js"></script>
+        <script defer src="rating.js"></script>
         <style>
+          body {
+                -webkit-user-select: none; /* Safari */
+                -ms-user-select: none; /* IE 10+ and Edge */
+                user-select: none; /* Standard syntax */
+          }
             #ratingTooltip {
                 margin-top: 40px;
+                -webkit-user-select: none; /* Safari */
+                -ms-user-select: none; /* IE 10+ and Edge */
+                user-select: none; /* Standard syntax */
             }
             .tooltip-text {
-                background: #333; color:aliceblue; padding: 10px; font-size:50px;
+                 color:#ffc000; padding: 10px; font-size:50px;  text-shadow: 2px 2px 0px #000000;
             }
-            span.tooltip-text:after {
+            /* span.tooltip-text:after {
                 content: "";
                 position: absolute;
                 width: 0;
                 height: 0;
-                border-width: 39px;
+                border-width: 48px;
                 border-style: solid;
                 border-color: transparent #333333 transparent transparent;
                 top: -2px;
-                left: -43px;
+                left: -81px;
+            } */
+            .star-span {
+              font-size: 100px;
+              cursor: pointer;
+              color:#ffbf00;
             }
         </style>
     </head>
     <body>
         <section class="jumbotron text-center">  
             <div class="container-fluid">
+                <div class="row" id="ratingContainer">
+                  
+                </div>
                 <div class="row">
-                  <div class="col-sm">
-                    <span style='font-size:100px;'>&#9733;</span>
-                  </div>
-                  <div class="col-sm">
-                    <span style='font-size:100px;'>&#9734;</span>
-                  </div>
-                  <div class="col-sm">
-                    <span style='font-size:100px;'>&#9734;</span>
-                  </div>
-                  <div class="col-sm">
-                    <span style='font-size:100px;'>&#9734;</span>
-                  </div>
-                  <div class="col-sm">
-                    <span style='font-size:100px;'>&#9734;</span>
-                  </div>
                   <div class="col-sm" id="ratingTooltip">
-                    <span class='tooltip-text'>Poor</span>
+                    <span class='tooltip-text'>&nbsp;</span>
                   </div>
                 </div>
               </div>       
