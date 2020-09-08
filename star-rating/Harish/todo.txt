@@ -1,0 +1,25 @@
+- Check module reveling pattern with class instead of IFEE
+- Create library
+- Create Module, 
+- Create NPM package 
+- import with require() , AMD / UMD 
+- 
+
+Approach:
+- prototype
+- module reveling IFEE
+- class
+- package npm 
+- 
+
+
+Learnings:
+- scope
+- hosting
+- closure
+- IFEE
+- Module pattern
+- prototype
+- class
+- NPM
+- AMD / UMD 
