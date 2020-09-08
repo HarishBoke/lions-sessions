@@ -37,13 +37,14 @@ const starRating  = (function rating(){
                 ratingTooltipChild.innerHTML = "Terrible!"
             break;
             default:
-                ratingTooltipChild.innerHTML = "Unknown!"
+                ratingTooltipChild.innerHTML = "Not Defined!"
             break;
         }
     }
-    const actionOnStar = (e, entitySpec, domElements) => {
-        const count = e.parentNode.id.split('_')[1];
-        const id_prefix = e.parentNode.id.split('_')[0];
+    const actionOnStar = (e, entitySpec, domElements, starLength) => {
+        const splitId = e.parentNode.id.split('_')
+        const count = splitId[1];
+        const id_prefix = splitId[0];
         for(let i = 0; i < starLength; i++){
             document.getElementById(`${id_prefix}_${i}`).firstElementChild.innerHTML = entitySpec && entitySpec.entity || starEntity;
             deactivateStar(document.getElementById(`${id_prefix}_${i}`))
@@ -62,7 +63,7 @@ const starRating  = (function rating(){
         showRatingText(count, domElements)
     }
     // Should return Star HTML, Match Snapshot
-    const createStarElm = (action, entitySpec, domElements) => {
+    const createStarElm = (action, entitySpec, domElements, starLength) => {
         const entityColor = entitySpec && entitySpec.color || "#ffc000";
 
         const star = document.createElement('div')
@@ -71,22 +72,22 @@ const starRating  = (function rating(){
         starSpan.classList.add('star-span')
         starSpan.style.color = entityColor
         starSpan.innerHTML = entitySpec && entitySpec.entity || starEntity
-        starSpan.addEventListener(action, actionOnStar.bind(null, starSpan, entitySpec, domElements))
+        starSpan.addEventListener(action, actionOnStar.bind(null, starSpan, entitySpec, domElements, starLength))
         star.append(starSpan)
         return star
     }
     // Should render and assign actions as per input
     // @number of start, action on start
-    const generateStarUI = (action,id, entitySpec, domElements) => {
+    const generateStarUI = (action,id, entitySpec, domElements, starLength) => {
         let id_prefix = domElements && domElements.container || "star"
-        const star = createStarElm(action, entitySpec, domElements)
+        const star = createStarElm(action, entitySpec, domElements, starLength)
         star.setAttribute("id", `${id_prefix}_${id}`);
         return ratingContainer.appendChild(star)
     }
     // Should render on UI number of times as per input 
     const renderRatingComponent = (starLength, ratingEventType, entitySpec, domElements) => {
         for(let i = 0; i < starLength; i++){
-            generateStarUI(ratingEventType, i, entitySpec, domElements)
+            generateStarUI(ratingEventType, i, entitySpec, domElements, starLength)
         }
     }
     function init(len, event, entitySpec, domElements) {  
@@ -99,7 +100,7 @@ const starRating  = (function rating(){
     return {
         init: init
     }
-})()
+})();
 /* 1.  @length, 
 2. @event, 
 3. @entityIcon / HTMLEntity { normal and active, color} 
