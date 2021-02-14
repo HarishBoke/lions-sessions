@@ -1,0 +1,19 @@
+section{
+    padding: 5rem 0;
+    background: #f3f3f3;
+}
+.margin-2rem{
+    margin: 2rem;
+}
+.store-item-icon {
+    position: absolute;
+    bottom: 66px;
+    right: 0;
+    padding: 0.60rem;
+    background: rgb(254, 233, 151);
+    border-top-left-radius: 1rem;
+    display:  none;
+}
+.card-img-top:hover + .store-item-icon{
+    display: block;
+}

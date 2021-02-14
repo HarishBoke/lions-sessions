@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript Filter Assignment </title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="https://use.fontawesome.com/4be9b5539f.js"></script>
+    </head>
+    <body>
+  
+          <section id="store" class="store py-5">
+              <div class="container">
+                <!-- section title -->
+                <div class="row">
+                  <div class="col-10 mx-auto col-sm-6 text-center">
+                    <h1 class="text-capitalize">our <strong class="banner-title ">store</strong></h1>
+                  </div>
+
+                  <div class=" col-lg-8 mx-auto d-flex justify-content-around my-2 sortBtn flex-wrap" id="filterBtn">
+                      
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-10 mx-auto col-md-6">
+                    <form>
+                      <div class="input-group mb-3">
+                        <div class="input-group-prepend ">
+                          <span class="input-group-text search-box" id="searchIcon"><i class="fa fa-search" aria-hidden="true"></i></span>
+                        </div>
+                        <input type="text" class="form-control" placeholder="item...." onkeyup = "myEfficientFn()" id="searchItem">
+                      </div>
+          
+                    </form>
+                  </div>
+                </div>
+      
+                <!-- store  items-->
+                <div class="row" id="storeItems">
+                </div>
+            </div>
+          </section>
+  
+          <script type="text/javascript" src="js/index.js"></script>
+      </body>
+  </html>
+
